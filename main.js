@@ -83,6 +83,14 @@ function my_keydown(e)
 	function up()
 	{
 		// Write a code to move ball upward.
+		if (ball_y >=5)
+		 {
+			ball_y = ball_y-block_image_height;
+			console.log('block image height'+block_image_height);
+			console.log('when up arrow is pressed, x ='+ball_x+' y='+ball_y);
+			canvas.remove(ball_obj);
+			new_image();
+		 }
 	}
 
 	function down()
@@ -102,8 +110,13 @@ function my_keydown(e)
 	{
 		if(ball_x >5)
 		{
-			// Write a code to move ball left side.
-		}
+			ball_x = ball_x-block_image_width;
+			console.log('block image width'-block_image_width);
+			console.log('when left arrow is pressed, x ='+ball_x+' y='+ball_y);
+			canvas.remove(ball_obj);
+			new_image();
+		 }
+		
 	}
 
 	function right()
@@ -111,7 +124,13 @@ function my_keydown(e)
 		if(ball_x <=1050)
 		{
 			// Write a code to move ball right side.
-		}
+			ball_x = ball_x+block_image_width;
+			console.log('block image width'+block_image_width);
+			console.log('when right arrow is pressed, x ='+ball_x+' y='+ball_y);
+			canvas.remove(ball_obj);
+			new_image();
+		 }
+		
 	}
 	
 }
