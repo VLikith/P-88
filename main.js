@@ -11,7 +11,8 @@ hole_x=800;
 block_image_width = 5;
 block_image_height = 5;
 
-function load_img(){
+function load_img()
+{
 	// write code to Upload golf image on the canvas
 	fabric.Image.fromURL("golf-h.png", function(Img) {
 		hole_obj = Img;
@@ -79,6 +80,7 @@ function my_keydown(e)
 			console.log("right");
 		}
 	}
+}
 	
 	function up()
 	{
@@ -133,5 +135,5 @@ function my_keydown(e)
 		
 	}
 	
-}
+
 
